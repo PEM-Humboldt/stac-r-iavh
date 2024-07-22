@@ -1,0 +1,24 @@
+---
+title: "Tutorial STAC R IAvH"
+author: 
+  - name: "Rincon-Parra VJ"
+    email: "rincon-v@javeriana.edu.co"
+affiliation: "Instituto de Investigación de Recursos Biológicos Alexander von Humboldt - IAvH"
+output: 
+  #md_document:
+  github_document:
+    md_extension: +gfm_auto_identifiers
+    preserve_yaml: true
+    toc: false
+    toc_depth: 6
+---
+
+Los directorios STAC (SpatioTemporal Asset Catalog) son una especificación para organizar y describir activos espaciotemporales (datos geoespaciales) en formato JSON. Esto facilita la indexación, búsqueda y gestión de información geoespacial, permitiendo acceder a los datos de forma estandarizada. Las consultas STAC simplifican la carga de datos permitiendo descargar datos en escalas particulares sin la necesidad de descargar los insumos completos. Por ejemplo, en Colombia, si necesitamos datos de huella espacial humana para un departamento, no es necesario descargar el mapa de todo el país, sino que la consulta STAC descarga recortada la información para solo ese departamento. Esto es beneficioso para optimizar recursos, reducir el tiempo de descarga y facilitar la gestión de grandes volúmenes de datos.
+
+STAC en sí mismos no son un repositorio de capas, sino el medio para acceder a fragmentos de estos datos. Esto lo hacen mediante los catálogos JSON que contienen metadatos estructurados que describen y enlazan la información geografica y de atributos de las capas, de manera que permiten una navegación estructurada y eficiente de los datos, facilitando la localización y acceso a la información relevante.
+Desde código se puede acceder a STACs mediante APIs que permiten interactuar con catálogos STAC, buscar y descargar datos geoespaciales de manera eficiente.
+
+El código anexo describe cómo realizar una consulta STAC desde R. Comienza realizando una consulta API a una URL STAC. Luego explora las colecciones, que son conjuntos de datos relacionados, y las features, que son elementos individuales dentro de una colección con información detallada. También accede a los assets, que son recursos de datos asociados a las feature. Finalmente, carga las capas especificando un polígono, resolución y sistema de coordenadas definidos.
+
+### Referencias 
+[STAC Tutorials. STAC SpatioTemporal Asset Catalogs https://stacspec.org/en/] (https://stacspec.org/en/)
